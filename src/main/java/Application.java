@@ -9,5 +9,6 @@ public class Application {
         SpeakerService speakerService = new SpeakerServiceImpl();
         final List<Speaker> speakerList = speakerService.findAll();
 
+        System.out.println(speakerList.get(0).getFirstName());
     }
 }
