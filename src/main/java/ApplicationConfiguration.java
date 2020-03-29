@@ -8,11 +8,11 @@ import service.SpeakerServiceImpl;
 @Configuration
 public class ApplicationConfiguration {
 
-    @Bean(name = "serviceSpeaker")
+    @Bean(name = "speakerService")
     public SpeakerService getSpeakerService() {
         SpeakerServiceImpl speakerService = new SpeakerServiceImpl();
         speakerService.setRepository(getSpeakerRepository());
-        return new SpeakerServiceImpl();
+        return speakerService;
     }
 
     @Bean(name = "speakerRepository")
