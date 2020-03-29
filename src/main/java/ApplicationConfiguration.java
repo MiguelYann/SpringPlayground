@@ -8,10 +8,10 @@ import service.SpeakerServiceImpl;
 @Configuration
 public class ApplicationConfiguration {
 
-    @Bean(name = "speakerService")
+    @Bean(name = "serviceSpeaker")
     public SpeakerService getSpeakerService() {
-        SpeakerServiceImpl speakerService = new SpeakerServiceImpl();
-        speakerService.setRepository(getSpeakerRepository());
+        SpeakerServiceImpl speakerService = new SpeakerServiceImpl(getSpeakerRepository());
+// Setter injection       speakerService.setRepository(getSpeakerRepository());
         return speakerService;
     }
 

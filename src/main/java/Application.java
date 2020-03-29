@@ -9,7 +9,7 @@ public class Application {
     public static void main(String[] args) {
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
-        SpeakerService speakerService = applicationContext.getBean("speakerService", SpeakerService.class);
+        SpeakerService speakerService = applicationContext.getBean("serviceSpeaker", SpeakerService.class);
 
         final List<Speaker> speakerList = speakerService.findAll();
 
